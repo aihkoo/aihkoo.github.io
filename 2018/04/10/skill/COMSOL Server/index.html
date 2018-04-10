@@ -4,23 +4,28 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Aihkoo</title>
+    <title>COMSOL Server配置 | Aihkoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="aihkoo">
     
 
     
-    <meta name="description" content="aihkoo/技术/生活">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Aihkoo">
-<meta property="og:url" content="http://blog.aihkoo.cn/index.html">
+    <meta name="description" content="COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考COMSOL Server 手册，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。 Windows版(Windows 10)官方安装">
+<meta name="keywords" content="Software,Method">
+<meta property="og:type" content="article">
+<meta property="og:title" content="COMSOL Server配置">
+<meta property="og:url" content="http://blog.aihkoo.cn/2018/04/10/skill/COMSOL Server/index.html">
 <meta property="og:site_name" content="Aihkoo">
-<meta property="og:description" content="aihkoo/技术/生活">
+<meta property="og:description" content="COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考COMSOL Server 手册，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。 Windows版(Windows 10)官方安装">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://blog.aihkoo.cn/images/Winlogin.png">
+<meta property="og:image" content="http://blog.aihkoo.cn/images/Ubuntulogin.png">
+<meta property="og:updated_time" content="2018-04-10T01:47:17.154Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Aihkoo">
-<meta name="twitter:description" content="aihkoo/技术/生活">
+<meta name="twitter:title" content="COMSOL Server配置">
+<meta name="twitter:description" content="COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考COMSOL Server 手册，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。 Windows版(Windows 10)官方安装">
+<meta name="twitter:image" content="http://blog.aihkoo.cn/images/Winlogin.png">
 
     
     <link rel="alternative" href="/atom.xml" title="Aihkoo" type="application/atom+xml">
@@ -74,12 +79,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2018/04/10/skill/COMSOL Server/" title="COMSOL Server配置" itemprop="url">COMSOL Server配置</a>
@@ -93,9 +96,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <p>COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考<a href="http://cdn.comsol.com/documentation/5.3.1.229/COMSOL_ServerManual.zh_CN.pdf" target="_blank" rel="noopener">COMSOL Server 手册</a>，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows版-Windows-10"><span class="toc-number">1.</span> <span class="toc-text">Windows版(Windows 10)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#管理员权限"><span class="toc-number">1.0.1.</span> <span class="toc-text">管理员权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装目录"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-number">1.0.3.</span> <span class="toc-text">配置文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux版-Ubuntu-16-04"><span class="toc-number">2.</span> <span class="toc-text">Linux版(Ubuntu 16.04)</span></a></li></ol>
+		
+		</div>
+		
+		<p>COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考<a href="http://cdn.comsol.com/documentation/5.3.1.229/COMSOL_ServerManual.zh_CN.pdf" target="_blank" rel="noopener">COMSOL Server 手册</a>，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。</p>
 <h1 id="Windows版-Windows-10"><a href="#Windows版-Windows-10" class="headerlink" title="Windows版(Windows 10)"></a>Windows版(Windows 10)</h1><p>官方安装默认创建本地管理员用户，但使用SSQ的安装方法并不会创建，也即不会产生%DIR%bin\tomcat\conf\login.properties等文件，使得安装后Server不可用。SSQ中包含的.bat批处理文件运行会报错，需要根据COMSOL安装目录进行修改。<br>使用记事本或文本编辑工具打开.bat文件，文件共99行，下面以绝对行号对该文件进行修改  </p>
 <h3 id="管理员权限"><a href="#管理员权限" class="headerlink" title="管理员权限"></a>管理员权限</h3><p>8-14行检测是否以管理员身份运行，程序运行时会报错，可以直接删掉，运行程序时以管理员身份运行即可。删掉程序如下： </p>
 <pre><code>REM Detecting if we are administrators  
@@ -125,14 +135,9 @@ set &quot;COMSOLSERVERVER=53a&quot;
 <pre><code>/bin/comsol server
 </code></pre><p><img src="/images/Ubuntulogin.png" alt=""><br>还可以搞一个服务程序，具体可以参考官方手册。</p>
 <p>果然还是Linux暴力美学，目前已经熟练掌握了COMSOL Server的安装和卸载，只差一个服务器了。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -150,24 +155,30 @@ set &quot;COMSOLSERVERVER=53a&quot;
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://blog.aihkoo.cn/2018/04/10/skill/COMSOL Server/" data-title="COMSOL Server配置 | Aihkoo" data-tsina="5261663578" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
+   	       
+	</article>
+	
+	
 
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows版-Windows-10"><span class="toc-number">1.</span> <span class="toc-text">Windows版(Windows 10)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#管理员权限"><span class="toc-number">1.0.1.</span> <span class="toc-text">管理员权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装目录"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-number">1.0.3.</span> <span class="toc-text">配置文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux版-Ubuntu-16-04"><span class="toc-number">2.</span> <span class="toc-text">Linux版(Ubuntu 16.04)</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -335,12 +346,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -406,4 +494,4 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
