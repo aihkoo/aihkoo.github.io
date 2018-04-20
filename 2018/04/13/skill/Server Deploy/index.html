@@ -4,27 +4,27 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>COMSOL Server配置 | Aihkoo</title>
+    <title>Server 配置 | Aihkoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="aihkoo">
     
 
     
-    <meta name="description" content="COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考COMSOL Server 手册，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。 Windows版(Windows 10)官方安装">
-<meta name="keywords" content="Software,Method">
+    <meta name="description" content="终于可以解决只差一个服务器的问题了。怀揣三千预算，理想中的配置是这样的：双路E5来一套，一体水冷来一套，RAID0组起来，然后淘宝了个单子，大概长这样。    配件 型号 价格       CPU E52680V2 1050*2     散热器 猫头鹰 500*2   主板 S2600CP 1300   硬盘 850EVO 500   内存 REG ECC 170*16   电源 长城500W 4">
+<meta name="keywords" content="Method,Hardware">
 <meta property="og:type" content="article">
-<meta property="og:title" content="COMSOL Server配置">
-<meta property="og:url" content="http://blog.aihkoo.cn/2018/04/10/skill/COMSOL Server/index.html">
+<meta property="og:title" content="Server 配置">
+<meta property="og:url" content="http://blog.aihkoo.cn/2018/04/13/skill/Server Deploy/index.html">
 <meta property="og:site_name" content="Aihkoo">
-<meta property="og:description" content="COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考COMSOL Server 手册，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。 Windows版(Windows 10)官方安装">
+<meta property="og:description" content="终于可以解决只差一个服务器的问题了。怀揣三千预算，理想中的配置是这样的：双路E5来一套，一体水冷来一套，RAID0组起来，然后淘宝了个单子，大概长这样。    配件 型号 价格       CPU E52680V2 1050*2     散热器 猫头鹰 500*2   主板 S2600CP 1300   硬盘 850EVO 500   内存 REG ECC 170*16   电源 长城500W 4">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://blog.aihkoo.cn/images/Winlogin.png">
 <meta property="og:image" content="http://blog.aihkoo.cn/images/Ubuntulogin.png">
-<meta property="og:updated_time" content="2018-04-10T01:47:17.154Z">
+<meta property="og:updated_time" content="2018-04-12T02:07:46.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="COMSOL Server配置">
-<meta name="twitter:description" content="COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考COMSOL Server 手册，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。 Windows版(Windows 10)官方安装">
+<meta name="twitter:title" content="Server 配置">
+<meta name="twitter:description" content="终于可以解决只差一个服务器的问题了。怀揣三千预算，理想中的配置是这样的：双路E5来一套，一体水冷来一套，RAID0组起来，然后淘宝了个单子，大概长这样。    配件 型号 价格       CPU E52680V2 1050*2     散热器 猫头鹰 500*2   主板 S2600CP 1300   硬盘 850EVO 500   内存 REG ECC 170*16   电源 长城500W 4">
 <meta name="twitter:image" content="http://blog.aihkoo.cn/images/Winlogin.png">
 
     
@@ -85,14 +85,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/04/10/skill/COMSOL Server/" title="COMSOL Server配置" itemprop="url">COMSOL Server配置</a>
+      <a href="/2018/04/13/skill/Server Deploy/" title="Server 配置" itemprop="url">Server 配置</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="aihkoo" target="_blank" itemprop="author">aihkoo</a>
 		
   <p class="article-time">
-    <time datetime="2018-04-10T01:00:00.000Z" itemprop="datePublished"> 发表于 Apr 10 2018</time>
+    <time datetime="2018-04-13T02:00:00.000Z" itemprop="datePublished"> 发表于 Apr 13 2018</time>
     
   </p>
 </header>
@@ -105,7 +105,55 @@
 		
 		</div>
 		
-		<p>COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考<a href="http://cdn.comsol.com/documentation/5.3.1.229/COMSOL_ServerManual.zh_CN.pdf" target="_blank" rel="noopener">COMSOL Server 手册</a>，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。</p>
+		<p>终于可以解决只差一个服务器的问题了。怀揣三千预算，理想中的配置是这样的：双路E5来一套，<del>一体水冷来一套，RAID0组起来</del>，然后淘宝了个单子，大概长这样。</p>
+<table>
+<thead>
+<tr>
+<th>配件</th>
+<th>型号</th>
+<th>价格  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>E52680V2</td>
+<td>1050*2  </td>
+</tr>
+<tr>
+<td>散热器</td>
+<td>猫头鹰</td>
+<td>500*2</td>
+</tr>
+<tr>
+<td>主板</td>
+<td>S2600CP</td>
+<td>1300</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>850EVO</td>
+<td>500</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>REG ECC</td>
+<td>170*16</td>
+</tr>
+<tr>
+<td>电源</td>
+<td>长城500W</td>
+<td>429</td>
+</tr>
+<tr>
+<td>—–</td>
+<td>—–</td>
+<td>8049</td>
+</tr>
+</tbody>
+</table>
+<p>果然超预算还是很轻松的，双路E5不能变，三千预算不能变，只能拿起大刀开始砍。首先是散热器太贵了，查了下发现能压住115W性能巨兽的</p>
+<p>COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考<a href="http://cdn.comsol.com/documentation/5.3.1.229/COMSOL_ServerManual.zh_CN.pdf" target="_blank" rel="noopener">COMSOL Server 手册</a>，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。</p>
 <h1 id="Windows版-Windows-10"><a href="#Windows版-Windows-10" class="headerlink" title="Windows版(Windows 10)"></a>Windows版(Windows 10)</h1><p>官方安装默认创建本地管理员用户，但使用SSQ的安装方法并不会创建，也即不会产生%DIR%bin\tomcat\conf\login.properties等文件，使得安装后Server不可用。SSQ中包含的.bat批处理文件运行会报错，需要根据COMSOL安装目录进行修改。<br>使用记事本或文本编辑工具打开.bat文件，文件共99行，下面以绝对行号对该文件进行修改  </p>
 <h3 id="管理员权限"><a href="#管理员权限" class="headerlink" title="管理员权限"></a>管理员权限</h3><p>8-14行检测是否以管理员身份运行，程序运行时会报错，可以直接删掉，运行程序时以管理员身份运行即可。删掉程序如下： </p>
 <pre><code>REM Detecting if we are administrators  
@@ -148,7 +196,7 @@ set &quot;COMSOLSERVERVER=53a&quot;
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Software/">Software</a><a href="/tags/Method/">Method</a>
+  <span></span> <a href="/tags/Method/">Method</a><a href="/tags/Hardware/">Hardware</a>
   </div>
 
 </div>
@@ -157,7 +205,7 @@ set &quot;COMSOLSERVERVER=53a&quot;
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://blog.aihkoo.cn/2018/04/10/skill/COMSOL Server/" data-title="COMSOL Server配置 | Aihkoo" data-tsina="5261663578" class="share clearfix">
+	  <div data-url="http://blog.aihkoo.cn/2018/04/13/skill/Server Deploy/" data-title="Server 配置 | Aihkoo" data-tsina="5261663578" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -170,14 +218,14 @@ set &quot;COMSOLSERVERVER=53a&quot;
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2018/04/20/skill/Server Client/" title="COMSOL Server及Client使用">
-  <strong>上一篇：</strong><br/>
-  <span>
-  COMSOL Server及Client使用</span>
+
+<div class="next">
+<a href="/2018/04/10/skill/COMSOL Server/"  title="COMSOL Server配置">
+ <strong>下一篇：</strong><br/> 
+ <span>COMSOL Server配置
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -226,11 +274,15 @@ set &quot;COMSOLSERVERVER=53a&quot;
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Software/" title="Software">Software<sup>2</sup></a></li>
+				<li><a href="/tags/Method/" title="Method">Method<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Method/" title="Method">Method<sup>2</sup></a></li>
+				<li><a href="/tags/Software/" title="Software">Software<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hardware/" title="Hardware">Hardware<sup>1</sup></a></li>
 			
 		
 		</ul>
