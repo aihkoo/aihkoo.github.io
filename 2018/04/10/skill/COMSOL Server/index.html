@@ -98,13 +98,6 @@
 </header>
 	<div class="article-content">
 		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows版-Windows-10"><span class="toc-number">1.</span> <span class="toc-text">Windows版(Windows 10)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#管理员权限"><span class="toc-number">1.0.1.</span> <span class="toc-text">管理员权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装目录"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-number">1.0.3.</span> <span class="toc-text">配置文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux版-Ubuntu-16-04"><span class="toc-number">2.</span> <span class="toc-text">Linux版(Ubuntu 16.04)</span></a></li></ol>
-		
-		</div>
-		
 		<p>COMSOL Server的安装和COMSOL Multiphysics即单机版本几乎没有区别，且二者使用的镜像文件相同，仅安装时所选许可证文件不同。软件版本为包含SSQ的5.3a，安装步骤参考<a href="http://cdn.comsol.com/documentation/5.3.1.229/COMSOL_ServerManual.zh_CN.pdf" target="_blank" rel="noopener">COMSOL Server 手册</a>，基本上是一路Next，各种选项与手册中推荐一致，区别在于安装之后的配置，以下对Windows版和Linux版分别进行配置。</p>
 <h1 id="Windows版-Windows-10"><a href="#Windows版-Windows-10" class="headerlink" title="Windows版(Windows 10)"></a>Windows版(Windows 10)</h1><p>官方安装默认创建本地管理员用户，但使用SSQ的安装方法并不会创建，也即不会产生%DIR%bin\tomcat\conf\login.properties等文件，使得安装后Server不可用。SSQ中包含的.bat批处理文件运行会报错，需要根据COMSOL安装目录进行修改。<br>使用记事本或文本编辑工具打开.bat文件，文件共99行，下面以绝对行号对该文件进行修改  </p>
 <h3 id="管理员权限"><a href="#管理员权限" class="headerlink" title="管理员权限"></a>管理员权限</h3><p>8-14行检测是否以管理员身份运行，程序运行时会报错，可以直接删掉，运行程序时以管理员身份运行即可。删掉程序如下： </p>
