@@ -82,21 +82,33 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/12/15/PSG/PSG Poker/" title="PSG首家赌场上线啦" itemprop="url">PSG首家赌场上线啦</a>
+      <a href="/2018/12/16/skill/TensorFlow deploy/" title="我要炼丹之 Win10 TensorFlow(GPU) 安装" itemprop="url">我要炼丹之 Win10 TensorFlow(GPU) 安装</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="aihkoo" target="_blank" itemprop="author">aihkoo</a>
 		
   <p class="article-time">
-    <time datetime="2018-12-15T15:59:59.000Z" itemprop="datePublished"> 发表于 Dec 15 2018</time>
+    <time datetime="2018-12-16T15:00:00.000Z" itemprop="datePublished"> 发表于 Dec 16 2018</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h1 id="开局一张图-剩下全靠赌"><a href="#开局一张图-剩下全靠赌" class="headerlink" title="开局一张图 剩下全靠赌"></a><center>开局一张图 剩下全靠赌<center></center></center></h1><p><div align="center"><img src="/images/poker.jpg" alt=""></div></p>
-<h1 id="PSG第一届赌神争霸赛"><a href="#PSG第一届赌神争霸赛" class="headerlink" title=" PSG第一届赌神争霸赛 "></a><center> PSG第一届赌神争霸赛 <center></center></center></h1><h2 id="赌神"><a href="#赌神" class="headerlink" title="赌神"></a><center>赌神</center></h2><p><div align="center"><img src="/images/JCY.jpg" alt="金昌勇"><center></center></div></p>
+        <h1 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h1><p>硬件环境 E5 2660v2*2 + GTX 1080Ti<br>操作系统 Windows 10 x64<br>软件列表 Anaconda3 + CUDA 10.0 + cuDNN v7.4 + Tensorflow-GPU 1.12<br>开发环境 pycharm</p>
+<h1 id="安装顺序"><a href="#安装顺序" class="headerlink" title="安装顺序"></a>安装顺序</h1><p>安装 NVIDIA CUDA驱动<br>下载CUDA和cuDNN<br>安装CUDA<br>cuda安装完成后默认的环境变量配置CUDA_PATH是C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0</p>
+<p>但是这样不能直接访问到bin和lib\x64下的程序包</p>
+<p>在path中加上这两个路径：<br>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin<br>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64</p>
+<p>安装cuDNN<br>拷文件</p>
+<p>安装Anaconda3</p>
+<p>tensorflow环境<br>conda create -n tensorflow python=3.6<br>activate tensorflow<br>pip install tensorflow-gpu  </p>
+<p>启动TensoFlow环境<br>activate tensorflow<br>关闭<br>deactivate</p>
+<p>安装pycharm<br>在pycharm解析器中选择tensorflow环境python3.6</p>
+<p>基本程序  </p>
+<blockquote>
+<p>import tensorflow as tf<br>hello = tf.container(‘Hello, TensorFlow!’)<br>print(tf.<strong>version</strong>)  </p>
+</blockquote>
+<p><img src="/images/HelloTensorFlow.png" alt=""></p>
 
         
         
@@ -109,13 +121,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/PSG/">PSG</a>
+  <a class="article-category-link" href="/categories/skill/">skill</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Poker/">Poker</a>
+  <span></span> <a href="/tags/Software/">Software</a><a href="/tags/Method/">Method</a>
   </div>
 
 </div>
@@ -321,11 +333,9 @@ set &quot;COMSOLSERVERVER=53a&quot;
 		<ul>
 		
 		  
-			<li><a href="/categories/PSG/" title="PSG">PSG<sup>1</sup></a></li>
-		  
 		
 		  
-			<li><a href="/categories/skill/" title="skill">skill<sup>2</sup></a></li>
+			<li><a href="/categories/skill/" title="skill">skill<sup>3</sup></a></li>
 		  
 		
 		</ul>
@@ -338,15 +348,13 @@ set &quot;COMSOLSERVERVER=53a&quot;
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Software/" title="Software">Software<sup>2</sup></a></li>
+				<li><a href="/tags/Software/" title="Software">Software<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Method/" title="Method">Method<sup>2</sup></a></li>
+				<li><a href="/tags/Method/" title="Method">Method<sup>3</sup></a></li>
 			
 		
-			
-				<li><a href="/tags/Poker/" title="Poker">Poker<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -423,7 +431,7 @@ set &quot;COMSOLSERVERVER=53a&quot;
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
 		
 		<a href="/about" target="_blank" title="aihkoo">aihkoo</a>
 		
