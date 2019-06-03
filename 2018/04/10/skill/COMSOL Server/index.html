@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-CN">
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   
     <title>COMSOL Server配置 | Aihkoo</title>
@@ -39,14 +39,14 @@
     
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
+</html>
   <body>
     <header>
       
 <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="Aihkoo" title="Aihkoo"/></a>
+				<a href="/"><img src="/img/logo.png" alt="Aihkoo" title="Aihkoo"></a>
 			</div>
 			
 			<div id="textlogo">
@@ -69,13 +69,13 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
 						<input type="hidden" name="q" value="site:blog.aihkoo.cn">
 					</form>
 					
 					</li>
 				</ul>
-			</nav>			
+			</ul></nav>			
 </div>
     </header>
     <div id="container">
@@ -91,7 +91,7 @@
        
 		<a href="/about" title="aihkoo" target="_blank" itemprop="author">aihkoo</a>
 		
-  <p class="article-time">
+  </p><p class="article-time">
     <time datetime="2018-04-10T01:00:00.000Z" itemprop="datePublished"> 发表于 Apr 10 2018</time>
     
   </p>
@@ -118,7 +118,7 @@ for %%a in (50 51 52 52a 52b 55 53a 53b 54 54a 54b) do (
 </code></pre><p>由于我的是5.3a版，且安装在了D盘，所以修改程序如下：  </p>
 <pre><code>set &quot;COMSOLROOT=D:\Program Files\COMSOL\COMSOL53a\Server&quot;  
 set &quot;COMSOLSERVERVER=53a&quot;  
-</code></pre><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>50-56行是批处理复制文件，作者在这里调用了7z的压缩程序，因此作者提供的exe是必不可少的，需要把作者提供的exe和bat程序放到同一个文件夹下，当然这时候运行还是会出现找不到7z.dll的问题，所以还是装一个7zip软件吧，请自行百度。安装7zip后以管理员身份运行bat文件，等待文件复制完成，然后大功告成，网页或Client登陆。<br><img src="/images/Winlogin.png" alt=""></p>
+</code></pre><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>50-56行是批处理复制文件，作者在这里调用了7z的压缩程序，因此作者提供的exe是必不可少的，需要把作者提供的exe和bat程序放到同一个文件夹下，当然这时候运行还是会出现找不到7z.dll的问题，所以还是装一个7zip软件吧，请自行百度。安装7zip后以管理员身份运行bat文件，等待文件复制完成，然后大功告成，网页或Client登陆。<br><img src="/images/Winlogin.png" alt></p>
 <h1 id="Linux版-Ubuntu-16-04"><a href="#Linux版-Ubuntu-16-04" class="headerlink" title="Linux版(Ubuntu 16.04)"></a>Linux版(Ubuntu 16.04)</h1><p>同样也是按照官方手册一路Next，同样也是安装之后死活不能用，同样也是大神作者提供了shell，可惜还是会报错……<br>不过作者在写shell的时候没那么勤劳，所以需要我们修改的也就没那么多</p>
 <pre><code>[ &quot;`uname`&quot; == &quot;Linux&quot; ] &amp;&amp; COMSOL_TARS=&quot;fl fl_setup_glnxa64 fl_setup_maclnx fl_jvm_glnxa64 fl_glnxa64 mph_maclnx mph_glnxa64&quot;  
 [ &quot;`uname`&quot; == &quot;Darwin&quot; ] &amp;&amp; COMSOL_TARS=&quot;fl fl_setup_maclnx fl_maclnx fl_jvm_maci64 fl_maci64 mph_maclnx mph_maci64&quot;
@@ -126,7 +126,7 @@ set &quot;COMSOLSERVERVER=53a&quot;
 <pre><code>COMSOL_TARS=&quot;fl fl_setup_glnxa64 fl_setup_maclnx fl_jvm_glnxa64 fl_glnxa64 mph_maclnx mph_glnxa64&quot;
 </code></pre><p>需要注意的是文件需要放到Server目录下，然后root执行即可，开启服务器一句话搞定</p>
 <pre><code>/bin/comsol server
-</code></pre><p><img src="/images/Ubuntulogin.png" alt=""><br>还可以搞一个服务程序，具体可以参考官方手册。</p>
+</code></pre><p><img src="/images/Ubuntulogin.png" alt><br>还可以搞一个服务程序，具体可以参考官方手册。</p>
 <p>果然还是Linux暴力美学，目前已经熟练掌握了COMSOL Server的安装和卸载，只差一个服务器了。</p>
   
 	</div>
@@ -163,9 +163,9 @@ set &quot;COMSOLSERVERVER=53a&quot;
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
+ <div class="prev">
  <a href="/2018/04/20/skill/Server Client/" title="COMSOL Server及Client使用">
-  <strong>上一篇：</strong><br/>
+  <strong>上一篇：</strong><br>
   <span>
   COMSOL Server及Client使用</span>
 </a>
@@ -182,7 +182,7 @@ set &quot;COMSOLSERVERVER=53a&quot;
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows版-Windows-10"><span class="toc-number">1.</span> <span class="toc-text">Windows版(Windows 10)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#管理员权限"><span class="toc-number">1.0.1.</span> <span class="toc-text">管理员权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装目录"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-number">1.0.3.</span> <span class="toc-text">配置文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux版-Ubuntu-16-04"><span class="toc-number">2.</span> <span class="toc-text">Linux版(Ubuntu 16.04)</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows版-Windows-10"><span class="toc-number">1.</span> <span class="toc-text">Windows版(Windows 10)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#管理员权限"><span class="toc-number">1.0.1.</span> <span class="toc-text">管理员权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装目录"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-number">1.0.3.</span> <span class="toc-text">配置文件</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux版-Ubuntu-16-04"><span class="toc-number">2.</span> <span class="toc-text">Linux版(Ubuntu 16.04)</span></a></li>
  
   </div>
 
@@ -194,7 +194,7 @@ set &quot;COMSOLSERVERVER=53a&quot;
 <div class="github-card">
 <p class="asidetitle">Github 名片</p>
 <div class="github-card" data-github="aihkoo" data-width="220" data-height="119" data-theme="medium">
-<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 </div>
   </div>
 
@@ -204,8 +204,6 @@ set &quot;COMSOLSERVERVER=53a&quot;
 <div class="categorieslist">
 	<p class="asidetitle">分类</p>
 		<ul>
-		
-		  
 		
 		  
 			<li><a href="/categories/skill/" title="skill">skill<sup>3</sup></a></li>
@@ -226,8 +224,6 @@ set &quot;COMSOLSERVERVER=53a&quot;
 		
 			
 				<li><a href="/tags/Method/" title="Method">Method<sup>3</sup></a></li>
-			
-		
 			
 		
 		</ul>
@@ -262,14 +258,14 @@ set &quot;COMSOLSERVERVER=53a&quot;
 
   <div class="weiboshow">
   <p class="asidetitle">新浪微博</p>
-    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=5261663578&verifier=c19ed92a&dpc=1"></iframe>
+    <iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=5261663578&verifier=c19ed92a&dpc=1"></iframe>
 </div>
 
 
 </aside>
 </div>
     </div>
-    <footer><div id="footer" >
+    <footer><div id="footer">
 	
 	<div class="line">
 		<span></span>
@@ -278,11 +274,11 @@ set &quot;COMSOLSERVERVER=53a&quot;
 	
 	
 	<section class="info">
-		<p> Hello,I&#39;m aihkoo. <br/>
+		<p> Hello,I&#39;m aihkoo. <br>
 			This is my blog.</p>
 	</section>
 	 
-	<div class="social-font" class="clearfix">
+	<div class="social-font">
 		
 		<a href="http://weibo.com/5261663578" target="_blank" class="icon-weibo" title="微博"></a>
 		
@@ -487,7 +483,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
