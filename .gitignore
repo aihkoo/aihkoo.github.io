@@ -1,0 +1,50 @@
+# .gitignore
+### Node.js
+node_modules/
+npm-debug.log
+npm-error.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+### VS Code
+.vscode/
+
+### Docusaurus
+.docusaurus/
+.cache/
+coverage/
+build/
+public/
+
+### Log Files
+*.log
+
+### Temporary Files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.swn
+
+### OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### IDE Files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+### Other
+*.tar.gz
+*.zip
